@@ -1,0 +1,133 @@
+/* Importa il font "Raleway" da Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+/* Definisce le variabili CSS globali */
+:root {
+    --glow-color: hsl(186 100% 69%);
+}
+
+/* Stile del pulsante */
+.glowing-btn {
+    position: relative;
+    color: var(--glow-color);
+    cursor: default;
+    padding: 0.35em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                     0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+
+/* Stile per l'effetto di luce prima del testo */
+.glowing-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+}
+
+/* Stile per l'effetto di luce dopo il pulsante */
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 0.45em;
+    background-color: hsl(295, 59%, 74%);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+/* Stile al passaggio del mouse */
+.glowing-btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+/* Stile per il testo luminoso al passaggio del mouse */
+.glowing-btn:hover .glowing-txt {
+    animation: none;
+}
+
+/* Stile per la lettera difettosa al passaggio del mouse */
+.glowing-btn:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+/* Stile per l'effetto di luce prima del testo al passaggio del mouse */
+.glowing-btn:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+/* Stile per l'effetto di luce dopo il pulsante al passaggio del mouse */
+.glowing-btn:hover:after {
+    opacity: 1;
+}
+
+/* Animazione per l'effetto di luce intermittente */
+@keyframes faulty-flicker {
+    0% { opacity: 0.1; }
+    2% { opacity: 0.1; }
+    4% { opacity: 0.5; }
+    19% { opacity: 0.5; }
+    21% { opacity: 0.1; }
+    23% { opacity: 1; }
+    80% { opacity: 0.5; }
+    83% { opacity: 0.4; }
+    87% { opacity: 1; }
+}
+
+/* Animazione per il testo intermittente */
+@keyframes text-flicker {
+    0% { opacity: 0.1; }
+    2% { opacity: 1; }
+    8% { opacity: 0.1; }
+    9% { opacity: 1; }
+    12% { opacity: 0.1; }
+    20% { opacity: 1; }
+    25% { opacity: 0.3; }
+    30% { opacity: 1; }
+    70% { opacity: 0.7; }
+    72% { opacity: 0.2; }
+    77% { opacity: 0.9; }
+    100% { opacity: 0.9; }
+}
+
+/* Animazione per l'effetto di luce intermittente sul bordo */
+@keyframes border-flicker {
+    0% { opacity: 0.1; }
+    2% { opacity: 1; }
+    4% { opacity: 0.1; }
+    8% { opacity: 1; }
+    70% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Media query per dispositivi con larghezza massima di 600px */
+@media only screen and (max-width: 600px) {
+    .glowing-btn {
+        font-size: 1em;
+    }
+}

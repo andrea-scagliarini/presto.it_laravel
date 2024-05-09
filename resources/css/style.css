@@ -1,0 +1,557 @@
+/* Definizione delle variabili di colore */
+:root {
+  --main: #FDFCDC; /* Colore principale */
+  --fine: #FED9B7; /* Colore secondario */
+  --root: #F07167; /* Colore di base */
+  --main1:#8E9AAF;
+  --main2:#CBC0D3;
+  --fine1:#EFD3D7;
+  --white:#FEEAFA;
+  --root1:#FEEAFA;
+  /* --grad1:linear-gradient(90deg, rgba(93,9,121,1) 47%, rgba(0,212,255,1) 100%); */
+  ;
+  
+  
+}
+
+
+/* navbar */
+.mynavbar {
+  background: rgb(246,182,18);
+  background: linear-gradient(to right, #ffeb3b, #4caf50);
+  padding: 15px; /* Aggiungi spazio intorno ai link */
+  
+  
+  
+}
+
+.myfooter{
+
+  background: rgb(246,182,18);
+  background: linear-gradient(to right, #ffeb3b, #4caf50);
+
+
+
+}
+
+
+
+
+
+.about {
+  position: absolute;
+  top: 100%; /* Imposta la distanza dal bordo superiore */
+  left: 0; /* Imposta la distanza dal bordo sinistro */
+  max-height: 150px; /* Imposta un'altezza massima */
+  
+  
+  max-width: 0px; /* Imposta una larghezza massima */
+}
+
+.drop{
+  margin-right: 100px;
+  list-style: none;
+  
+  
+  
+  
+  
+  
+  
+}
+
+
+
+.dadDrop {
+  position: start;
+}
+
+.lang {
+  height: 20px;
+  width: 20px;
+}
+
+
+
+/* Stile per il logo */
+
+.imagelogo {
+  height: 75px;
+  width: 115px;
+  padding: -20px;   
+  margin-top: 10px;
+  margin-block-start: 1%;
+  margin-right: 20px;
+  
+  
+}
+.language {
+  
+  height: 27px;
+  width: 40px;
+  
+  margin: 0%;
+  border: 0%;
+}
+
+
+
+
+
+
+/* Stile per il body */
+body {
+  /* background-image: url(/public/img/sfondotest.png); */
+  background-color: #e0f7fde0;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 150px;
+}
+
+
+
+
+/* Definizione del colore per gli elementi con classe .button */
+.buttonDad {
+  color-scheme: white;
+  padding: 20px;
+  
+}
+
+
+/* Media queries per renderlo responsive */
+
+/* Adatta il logo per schermi con larghezza massima di 768px */
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 40%;
+  }
+}
+
+/* Adatta ulteriormente il logo per schermi con larghezza massima di 480px */
+@media only screen and (max-width: 480px) {
+  .logo {
+    width: 60%;
+  }
+}
+
+
+
+/* Regole CSS per rendere la navbar responsive */
+@media (max-width: 768px) {
+  /* Riduci il padding del contenitore principale della navbar */
+  .container-navbar {
+    padding: 0;
+  }
+  
+  /* Imposta la larghezza massima del logo per adattarsi a schermi più piccoli */
+  .navbar-brand img {
+    max-width: 120px;
+  }
+  
+  /* Modifica la direzione dei link della navbar su schermi più piccoli */
+  .navbar-nav {
+    flex-direction: column;
+  }
+  
+  /* Aggiungi margine inferiore ai singoli elementi della navbar su schermi più piccoli */
+  .navbar-nav .nav-item {
+    margin-bottom: 5px;
+  }
+  
+  /* Aggiungi margine superiore alla navbar sul toggle su schermi più piccoli */
+  .navbar-collapse {
+    margin-top: 10px;
+  }
+  
+  /* Riduci il padding dei link della navbar su schermi più piccoli */
+  .nav-link {
+    padding: .5rem 1rem;
+    
+  }
+  
+  
+  
+  
+  /* Centra i pulsanti di accesso e registrazione sulla navbar su schermi più piccoli */
+  .buttonDad {
+    text-align: center;
+  }
+}
+
+.nav-link,
+.nav-link:after,
+.nav-link:before {
+  transition: all .5s;
+}
+.nav-link:hover {
+  border-bottom: var(--fine) 2px solid;
+  padding: 1px;
+}
+
+.imagelang {
+  height:30px
+}
+
+.prova {
+  width: 500px;
+  
+}
+
+.mybtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 25px; /* Per un aspetto rotondo */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Stile al passaggio del mouse */
+.mybtn:hover {
+  background-color: #45a049;
+}
+
+/* Stile al click */
+.mybtn:active {
+  background-color: #388e3c;
+}
+/* Stile per il pulsante */
+.mybtnone {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: #ffeb3b; /* Colore verde */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Stile al passaggio del mouse */
+.mybtnone:hover {
+  background-color: #bdab0c; /* Colore verde più scuro */
+  transform: translateY(-2px); /* Solleva leggermente il pulsante */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+/* Stile al click */
+.mybtnone:active {
+  background-color: #726808; /* Colore verde più scuro al click */
+  transform: translateY(1px); /* Abbassa leggermente il pulsante */
+  box-shadow: none; /* Rimuove l'ombra al click */
+}
+
+/* dropdown */
+.dropdown-menu{
+  
+  background: linear-gradient(to right, #ffeb3b, #4caf50); 
+  
+  
+  
+}
+/* effetto navbar */
+.dropdown-item:hover{
+  
+  background: linear-gradient(to left, #ffeb3b, #4caf50); 
+  color: white;
+  
+  
+}
+/* hover bottone annunci */
+.dropdown-item1:hover{
+  
+  background: linear-gradient(to left, #ffeb3b, #4caf50); 
+  color:white ;
+  border: 2px solid black;
+  
+  
+}
+
+.buttonone {
+  margin-right: 0px;
+}
+
+.img-preview{
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.page-holder {
+  
+  
+  
+}
+
+.bg-cover {
+  background-size: cover !important;
+}
+
+.animated-title3 {
+  font-size: 26px;
+  background-image: linear-gradient(to left, #090909, #007b4c); 
+  -webkit-background-clip : text;
+  -webkit-text-fill-color: transparent; 
+  
+  text-shadow: 1px 1px 1px rgba(1, 109, 155, 0.879);
+  background-size: cover;
+  letter-spacing: 2px;
+} 
+
+.animated-title {
+  font-size: 50px;
+  background-image: linear-gradient(to top, #ffffff, #00ff33); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #002738b8; 
+  text-shadow: 2px 3px 2px rgba(3, 153, 203, 0.91);
+  background-size: cover;
+  
+} 
+
+.animated-title2 {
+  font-size: 60px;
+  background-image: linear-gradient(to top, #ffffff, #350ca8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #3a2c47; 
+  text-shadow: 3px 6px 4px rgb(195, 81, 0);
+  background-size: cover;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.personalimage {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ABOUT US */
+.our-team{
+  position: relative;
+  overflow: hidden;
+}
+.our-team img{
+  width: 100%;
+  height: auto;
+  transform: scale(1.2,1.2) translateX(-25px);
+  transition: all 0.20s linear 0s;
+}
+.our-team:hover img{
+  transform: scale(1.2,1.2) translateX(0);
+}
+.our-team .over-layer{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.our-team .team-content{
+  width: 90%;
+  position: absolute;
+  bottom: -40px;
+  padding: 0 25px;
+  transition: all 0.40s ease 0s;
+}
+.our-team:hover .team-content{
+  bottom: 1%;
+}
+.our-team .title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin: 20px 0 5px;
+  text-transform: uppercase;
+}
+.our-team .post{
+  display: block;
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.our-team .description{
+  font-size: 15px;
+  color: #fff;
+  transform: translateY(100%);
+  transition: all 0.30s ease 0.1s;
+}
+.our-team:hover .description{
+  transform: translateY(0);
+}
+.our-team .social-links{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 10%;
+  height: 100%;
+  background: #30a5ab;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.our-team .social-links li{
+  margin: 20px 0;
+}
+.our-team .social-links li a{
+  color: #fff;
+  padding: 10px 0;
+}
+.our-team .social-links li a:hover{
+  text-decoration: none;
+}
+
+
+.myanchor {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: #ffeb3b; /* Colore verde */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imgheader {
+  margin-top: -35px;
+}
+
+
+
+
+
+
+/* sezione footer  */
+
+
+.customfooter:hover{
+  border-bottom: white 2px solid;
+  margin-bottom: 500px;
+  background-color: #ffeb3b; 
+  color: rgb(39, 10, 225) !important;
+  
+  
+  
+  
+  
+  
+}   
+
+
+.ul3::before {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee00;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.ul3:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+.ul3:hover {
+  color: #000000;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+
+
+
+/* form */
+
+
+.myform {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mytitle {
+  font-family:serif;
+  /* font-family: "Rubik Maps", system-ui; */
+  font-size: 35px !important;
+  font-style: normal;
+  color: rgb(0, 118, 134) ;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.879);
+  
+  
+}
+
+.price {
+  size:  150px !important;
+  
+}
+
+.price1{
+  
+  size:  200px !important;
+}
+
+
+.textcustom1{
+  font-size: large;
+  color: #000000;
+  
+  
+  
+}
+
+
+
+.description{
+  background-color: #64cefc15;
+  font-style: oblique;
+  color: #000000;
+  font-weight: bold;
+  
+  
+}
